@@ -30,7 +30,7 @@ document.getElementById("calulator").addEventListener("click", function () {
   const product8hourse =document.getElementById('8hoursProduct');
   const producedPreforms = document.getElementById('produce-preforms').value
 //   total production 
-  product8hourse.innerText = parseInt(remaingPreforms)  + parseInt(producedPreforms)
+  product8hourse.innerText = parseInt(remaingPreforms)  + parseInt(producedPreforms? producedPreforms:0)
   const totalProduction =   product8hourse.innerText
 console.log(totalProduction)
 
@@ -51,23 +51,29 @@ console.log(TotalMaterial)
   const perCase = document.getElementById('perCase').value
 
   const cases = document.getElementById("case");
-  const totalCase = parseInt(totalProduction/ perCase);
+  const totalCase = parseInt(totalProduction/ perCase? perCase:1);
   cases.innerText = totalCase;
 //   carton
 const carton = document.getElementById('percarton').value
-const totalCarton =  totalProduction /carton
+const cartons = (carton? carton: 1)
+const totalCarton =  totalProduction  / parseInt(cartons);
 const totalCartons = document.getElementById('Cartons')
 totalCartons.innerText = totalCarton
 
 // cages
 const cages = document.getElementById('per-cage').value;
 
-const totalCages = document.getElementById('cages')
+const totalCages = document.getElementById('cages');
+const totalCage =(cages? cages:1)
 
-totalCages.innerText = parseInt( totalCarton)  / parseInt(cages)
+totalCages.innerText = parseInt( totalCarton)  / parseInt(totalCage);
  
 
 
 
 
 });
+
+function refreshPage(){
+    window.location.reload();
+} 
