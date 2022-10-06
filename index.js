@@ -55,8 +55,8 @@ console.log(TotalMaterial)
   cases.innerText = totalCase;
 //   carton
 const carton = document.getElementById('percarton').value
-const cartons = (carton? carton: 1)
-const totalCarton =  totalProduction  / parseInt(cartons);
+const cartons = parseFloat((carton? carton: 0))
+const totalCarton =  parseFloat(totalProduction)  / parseInt(cartons);
 const totalCartons = document.getElementById('Cartons')
 totalCartons.innerText = totalCarton
 
