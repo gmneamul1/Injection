@@ -4,7 +4,7 @@ document.getElementById("calulator").addEventListener("click", function () {
     // cyce time 
   const cycleTime = document.getElementById("cycle").value;
 
-  const cycleString = parseInt(cycleTime ? cycleTime:1);
+  const cycleString = parseFloat(cycleTime ? cycleTime:1);
   const output = 345600 / cycleString;
   const outputString = parseInt(output);
   const outputText = document.getElementById("output");
