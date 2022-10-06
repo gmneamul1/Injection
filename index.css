@@ -2,3 +2,10 @@
 .margincustom{
     margin: auto;
 }
+
+.per-shift{
+    color: blueviolet;
+    font-weight: 800;
+    font-size: 20px;
+    margin-top: 2px;
+}
