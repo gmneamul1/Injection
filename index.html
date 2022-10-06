@@ -19,26 +19,28 @@
         <h4> Total Cages = <span id="cages"> 00 </span >  </h4>
             <h1 class="font-bold py-4 text-red-600">Calcualtor</h1>
 
-   <div class="flex justify-around pb-2 text-lime-300 font-bold">
-    <h4>Cycle Time  <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="cycle"  type="number"></h4>
-   <h4>Size  <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="size" type="number"></h4>
+   <div class="flex justify-between mx-4 pb-2 text-lime-300 font-bold">
+    <h4>Cycle Time  <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="cycle"  type="number"> Sec</h4>
+   <h4>Size  <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="size" type="number"> Gram</h4>
    </div>
 
-   <div class="flex justify-around pb-2 text-lime-300 font-bold"> <h4>Produce Preforms <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="produce-preforms" type="number"></h4>
-    <h4>Remaining Time <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="remaining-time" type="number"></h4></div>
   
-   <div class="flex justify-around pb-2 text-lime-300 font-bold">
-    <h4>Wastage  <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="wastage" type="number"></h4>
+  
+   <div class="flex justify-between mx-4 pb-2 text-lime-300 font-bold">
+    <h4>Wastage  <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="wastage" type="number"> kgs</h4>
    <h4>Total Preforms  <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="total-preforms" type="number"></h4>
    </div>
 
-   <div class="flex justify-around pb-2 text-lime-300 font-bold">
-    <h4>Per Case <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="perCase" type="number" placeholder="24"> </h4>
-   <h4>Per Carton <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="percarton" type="number" placeholder="00"> </h4>
+   <div class="flex justify-between mx-4 pb-2 text-lime-300 font-bold">
+    <h4>Per Case <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="perCase" type="number" placeholder="24"> ps</h4>
+   <h4>Per Carton <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="percarton" type="number" placeholder="00"> ps</h4>
    </div>
 
-  <div class="flex justify-around pb-2 text-lime-300 font-bold">
-    <h4>Per Cages <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="per-cage" type="number"> Cartons</h4> 
+   <div class="pb-2 text-lime-300 font-bold"> <h4>Current Preforms <input class="bg-red-400 border-2 border-lime-400 w-24 rounded" id="produce-preforms" type="number"> Ps</h4>
+    <h4>Remaining Time <input class="bg-red-400 border-2 border-lime-400 w-20 rounded" id="remaining-time" type="number">Min</h4></div>
+
+  <div class="flex justify-center mx-4 pb-2 text-lime-300 font-bold">
+    <h4>Per Container <input class="bg-red-400 border-2 border-lime-400 w-16 rounded" id="per-cage" type="number"> Cartons</h4> 
 </div>
 <br>
     <button class="w-96 bg-red-600 rounded hover:bg-sky-700 py-2 text-xl font-bold" id="calulator">Claculate</button> <br> 
