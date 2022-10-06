@@ -94,14 +94,29 @@ parseInt(producedPreforms ? producedPreforms : 0);
   const perCase = document.getElementById("perCase").value;
 
   const cases = document.getElementById("case");
-  const totalCase = parseInt(totalProduction / perCase ? perCase : 1);
-  cases.innerText = totalCase;
+  const totalCase = parseInt(totalProduction) / parseInt( perCase ? perCase : 24);
+ console.log(totalCase)
+ console.log(totalProduction)
+ console.log(( perCase ? perCase : 0))
+console.log(totalCase)
+  function totalCasena() {
+    if (!isFinite(totalCase)) {
+      return 0;
+    } else{
+ return totalCase
+    }
+    
+  }
+  const totalcaseNan = totalCasena()
+  console.log(totalcaseNan)
+
+  cases.innerText = totalcaseNan;
   //   carton
   const carton = document.getElementById("percarton").value;
-  const cartons = parseFloat(carton ? carton : 0);
+  const cartons = parseFloat(carton ? carton : 1);
   const totalCarton = parseFloat(totalProduction) / parseInt(cartons);
   const totalCartons = document.getElementById("Cartons");
-  totalCartons.innerText = totalCarton;
+  totalCartons.innerText = totalCarton.toFixed(2);
 
   // cages
   const cages = document.getElementById("per-cage").value;
@@ -109,7 +124,7 @@ parseInt(producedPreforms ? producedPreforms : 0);
   const totalCages = document.getElementById("cages");
   const totalCage = cages ? cages : 1;
 
-  totalCages.innerText = parseInt(totalCarton) / parseInt(totalCage);
+  totalCages.innerText = (parseInt(totalCarton) / parseInt(totalCage)).toFixed(2);
 });
 
 function refreshPage() {
