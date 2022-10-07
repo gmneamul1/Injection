@@ -31,26 +31,31 @@
     <!-- input data  -->
     <h1 class="font-bold py-4 text-red-600 text-xl">Input your Data</h1>
 
-    <div class="bg-gray-800 w-4/5 m-auto rounded">
+    <div class="bg-gray-800 w-4/5 m-auto rounded-xl ">
           <!-- size  -->
-      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
-        <h4>Preform Size</h4>
-        <h4 >
-          <input
-            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
-            id="size"
-            type="number"
-          />
-          Grm
-        </h4>
+
+
+      <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
+        <div class="text-end"><h4 class="text-right">Preform Size</h4></div>
+        <div class="flex content-center">
+            <div > <input
+                class="bg-white text-xl border-2 border-lime-400   text-black w-24  rounded"
+                id="size"
+                type="number"
+              /></div>
+            <h4 class=""><span > Grm</span>
+            </h4>
+        </div>
       </div>
+
+
         <!-- cycle time  -->
-      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
-        <h4 class="flex justify-around">Cycle Time</h4>
+      <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
+        <h4 class="flex justify-evenly">Cycle Time</h4>
 
         <h4>
           <input
-            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            class="bg-white text-xl border-2 border-lime-400   text-black w-24  rounded"
             id="cycle"
             type="number"
           />
@@ -59,11 +64,11 @@
       </div>
     
       <!-- wastage  -->
-      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+      <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
         <h4>Wastage  </h4>
         <h4>
           <input
-            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            class="bg-white text-xl border-2 border-lime-400  text-black w-24 ml-5 rounded"
             id="wastage"
             type="number"
           />
@@ -71,24 +76,23 @@
         </h4>
       </div>
       <!-- total preform  -->
-      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
-        <h4>Total preform</h4>
+      <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
+        <h4 class="text-left">Total preform</h4>
 
-        <h4>
+        <h4 class="mr-3">
           <input
-            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            class="bg-white text-xl border-2 border-lime-400  text-black w-24  rounded"
             id="total-preforms"
             type="number"
-          />
-          PS
+          /> PS
         </h4>
       </div>
       <!-- per case  -->
-      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+      <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
         <h4>Per Case</h4>
         <h4>
           <input
-            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            class="bg-white text-xl border-2 border-lime-400  ml-3 text-black w-24  rounded"
             id="perCase"
             type="number"
             placeholder="24"
@@ -97,11 +101,11 @@
         </h4>
       </div>
       <!-- per cartoons  -->
-      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+      <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
         <h4>Per Carton</h4>
         <h4>
           <input
-            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            class="bg-white text-xl border-2 border-lime-400  text-black w-24  rounded"
             id="percarton"
             type="number"
             placeholder="00"
@@ -110,33 +114,34 @@
         </h4>
       </div>
       <!-- curent preforms  -->
-      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+      <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
         <h4>Current Preforms</h4>
-        <h4>
+        <h4 class="mr-6">
           <input
-            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            class="bg-white text-xl border-2  border-lime-400 fixedt text-black w-24  rounded"
             id="produce-preforms"
             type="number"
+            
           />
-          Ps
+          <span class="curent">Ps</span>
         </h4>
       </div>
       <!-- remaining time  -->
-      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+      <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
         <h4>Remaining Time</h4>
-        <h4>
+        <h4 class="mr-2">
           <input
-            class="bg-gray-400 border-2 border-lime-400 w-20 rounded"
+            class="bg-white text-xl border-2 border-lime-400  w-24 text-black rounded"
             id="remaining-time"
             type="number"
-          />Min
+          /> Min
         </h4>
       </div>
-      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+      <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
         <h4>Per container</h4>
         <h4>
           <input
-            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            class="bg-white text-xl border-2 border-lime-400 ml-16 text-black w-24  rounded"
             id="per-cage"
             type="number"
           />
