@@ -19,7 +19,7 @@ document.getElementById("calulator").addEventListener("click", function () {
 
   const outputString = parseInt(perHourOutput);
   const outputText = document.getElementById("output");
-  outputText.innerText = perHourOutput;
+  outputText.innerText = perHourOutput.toFixed(2);
   const outputValue = outputText.innerText;
 
   const material = document.getElementById("size").value;
@@ -110,7 +110,7 @@ console.log(totalCase)
   const totalcaseNan = totalCasena()
   console.log(totalcaseNan)
 
-  cases.innerText = totalcaseNan;
+  cases.innerText = totalcaseNan.toFixed(2);
   //   carton
   const carton = document.getElementById("percarton").value;
   const cartons = parseFloat(carton ? carton : 1);
