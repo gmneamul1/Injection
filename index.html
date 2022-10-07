@@ -1,66 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="text-center xl:w-7/12 lg:w-7/12 items-center margincustom">
-    <h1 class="bg-black text-white text-xl font-bold ">Preforms Calculator</h1>
+  </head>
+  <body class="text-center xl:w-7/12 lg:w-7/12 items-center margincustom">
+    <h1 class="bg-black text-white text-xl font-bold">Preforms Calculator</h1>
     <h1 class="font-bold py-4">Result</h1>
     <!-- ourly production  -->
-   <div class="bg-green-400  rounded w-4/5 m-auto">
-    <h1 class="per-shift">Hourly Production</h1>
-    <h4> Output =<span id="output"> 00</span> Pieces</h4>
-    <h4> Material Consumed= <span id="material-kg"> 00 </span> Kgs</h4>
-   </div>
-   <!-- total ptoduction  -->
-   <div class="bg-blue-400  rounded w-4/5 m-auto">
-    <h1 class="per-shift">Per shift Production</h1>
-    <h4> Total Materials Consumed = <span id="total-materials"> 00 </span> Kgs</h4>
-    <h4> Total = <span id="case"> 00 </span > case </h4>
-    <h4>  Production = <span id="8hoursProduct"> 00  </span > Pieces</h4>
-        <h4> Total Cartons = <span id="Cartons"> 00 </span >  </h4>
-        <h4> Total Cages = <span id="cages"> 00 </span >  </h4>
-   </div>
+    <div class="bg-green-400 rounded w-4/5 m-auto">
+      <h1 class="per-shift">Hourly Production</h1>
+      <h4>Output =<span id="output"> 00</span> Pieces</h4>
+      <h4>Material Consumed= <span id="material-kg"> 00 </span> Kgs</h4>
+    </div>
+    <!-- total ptoduction  -->
+    <div class="bg-blue-400 rounded w-4/5 m-auto">
+      <h1 class="per-shift">Per shift Production</h1>
+      <h4>
+        Total Materials Consumed = <span id="total-materials"> 00 </span> Kgs
+      </h4>
+      <h4>Total = <span id="case"> 00 </span> case</h4>
+      <h4>Production = <span id="8hoursProduct"> 00 </span> Pieces</h4>
+      <h4>Total Cartons = <span id="Cartons"> 00 </span></h4>
+      <h4>Total Cages = <span id="cages"> 00 </span></h4>
+    </div>
+    <!-- input data  -->
+    <h1 class="font-bold py-4 text-red-600 text-xl">Input your Data</h1>
 
-            <h1 class="font-bold py-4 text-red-600 text-xl ">Input your Data</h1>
+    <div class="bg-gray-800 w-4/5 m-auto rounded">
+          <!-- size  -->
+      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+        <h4>Preform Size</h4>
+        <h4 >
+          <input
+            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            id="size"
+            type="number"
+          />
+          Grm
+        </h4>
+      </div>
+        <!-- cycle time  -->
+      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+        <h4 class="flex justify-around">Cycle Time</h4>
 
-   <div class="flex justify-between mx-4 pb-2 text-lime-300 font-bold">
-    <h4>Cycle Time  <input class="bg-gray-400 border-2 border-lime-400 w-16 rounded" id="cycle"  type="number"> Sec</h4>
-   <h4>Size  <input class="bg-gray-400 border-2 border-lime-400 w-16 rounded" id="size" type="number"> Gram</h4>
-   </div>
+        <h4>
+          <input
+            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            id="cycle"
+            type="number"
+          />
+          Sec
+        </h4>
+      </div>
+    
+      <!-- wastage  -->
+      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+        <h4>Wastage  </h4>
+        <h4>
+          <input
+            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            id="wastage"
+            type="number"
+          />
+          kgs
+        </h4>
+      </div>
+      <!-- total preform  -->
+      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+        <h4>Total preform</h4>
 
-  
-  
-   <div class="flex justify-between mx-4 pb-2 text-lime-300 font-bold">
-    <h4>Wastage  <input class="bg-gray-400 border-2 border-lime-400 w-16 rounded" id="wastage" type="number"> kgs</h4>
-   <h4>Total Preforms  <input class="bg-gray-400 border-2 border-lime-400 w-16 rounded" id="total-preforms" type="number"></h4>
-   </div>
+        <h4>
+          <input
+            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            id="total-preforms"
+            type="number"
+          />
+          PS
+        </h4>
+      </div>
+      <!-- per case  -->
+      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+        <h4>Per Case</h4>
+        <h4>
+          <input
+            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            id="perCase"
+            type="number"
+            placeholder="24"
+          />
+          ps
+        </h4>
+      </div>
+      <!-- per cartoons  -->
+      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+        <h4>Per Carton</h4>
+        <h4>
+          <input
+            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            id="percarton"
+            type="number"
+            placeholder="00"
+          />
+          ps
+        </h4>
+      </div>
+      <!-- curent preforms  -->
+      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+        <h4>Current Preforms</h4>
+        <h4>
+          <input
+            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            id="produce-preforms"
+            type="number"
+          />
+          Ps
+        </h4>
+      </div>
+      <!-- remaining time  -->
+      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+        <h4>Remaining Time</h4>
+        <h4>
+          <input
+            class="bg-gray-400 border-2 border-lime-400 w-20 rounded"
+            id="remaining-time"
+            type="number"
+          />Min
+        </h4>
+      </div>
+      <div class="flex justify-around mx-4 pb-2 text-lime-300 font-bold">
+        <h4>Per container</h4>
+        <h4>
+          <input
+            class="bg-gray-400 border-2 border-lime-400 w-24 rounded"
+            id="per-cage"
+            type="number"
+          />
+          Cartons
+        </h4>
+      </div>
+    </div>
+    <br />
+    <button
+      class="w-6/12 bg-red-600 rounded hover:bg-sky-700 py-2 text-xl font-bold"
+      id="calulator"
+    >
+      Claculate
+    </button>
+    <br />
 
-   <div class="flex justify-between mx-4 pb-2 text-lime-300 font-bold">
-    <h4>Per Case <input class="bg-gray-400 border-2 border-lime-400 w-16 rounded" id="perCase" type="number" placeholder="24"> ps</h4>
-   <h4>Per Carton <input class="bg-gray-400 border-2 border-lime-400 w-16 rounded" id="percarton" type="number" placeholder="00"> ps</h4>
-   </div>
-
-   <div class="pb-2 text-lime-300 font-bold"> <h4>Current Preforms <input class="bg-gray-400 border-2 border-lime-400 w-24 rounded" id="produce-preforms" type="number"> Ps</h4>
-    <h4>Remaining Time <input class="bg-gray-400 border-2 border-lime-400 w-20 rounded" id="remaining-time" type="number">Min</h4></div>
-
-  <div class="flex justify-center mx-4 pb-2 text-lime-300 font-bold">
-    <h4>Per Container <input class="bg-gray-400 border-2 border-lime-400 w-16 rounded" id="per-cage" type="number"> Cartons</h4> 
-</div>
-<br>
-    <button class="w-6/12 bg-red-600 rounded hover:bg-sky-700 py-2 text-xl font-bold" id="calulator">Claculate</button> <br> 
-  
-  
-
-
-
-        <button class=" w-6/12 bg-blue-600 rounded mt-4  hover:bg-sky-700 py-2 text-xl font-bold " type="submit" onClick="refreshPage()">Refresh Button</button>
+    <button
+      class="w-6/12 bg-blue-600 rounded mt-4 hover:bg-sky-700 py-2 text-xl font-bold"
+      type="submit"
+      onClick="refreshPage()"
+    >
+      Refresh Button
+    </button>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
