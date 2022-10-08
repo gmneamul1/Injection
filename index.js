@@ -3,13 +3,18 @@ document.getElementById("calulator").addEventListener("click", function () {
   const cycleTime = document.getElementById("cycle").value;
 
   const cycleString = parseFloat(cycleTime ? cycleTime : 0);
-  // console.log(cycleString)
+
+  // cavity 
+  const cavity = document.getElementById('cavity').value;
+  const cavityString =  parseInt(cavity? cavity : 96)
+  const cavityCycle= cavityString * 3600;
+  console.log(cavityCycle)
   // let output = 0;
    function outputvalue() {
     if (cycleString <= 0) {
       return 0;
     } else {
-      let output = 345600 / cycleString;
+      let output = cavityCycle / cycleString;
       // console.log(output);
       return output;
     }
