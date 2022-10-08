@@ -21,3 +21,14 @@
     position: relative;
    
 }
+.preforms{
+    /* display: flex;
+    justify-content: center; */
+    position: sticky;
+    top: 0;
+   
+}
+/* .per-shift{
+position: sticky;
+top: 0px;
+} */
