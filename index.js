@@ -6,7 +6,7 @@ document.getElementById("calulator").addEventListener("click", function () {
 
   // cavity 
   const cavity = document.getElementById('cavity').value;
-  const cavityString =  parseInt(cavity? cavity : 96)
+  const cavityString =  parseFloat(cavity? cavity : 96)
   const cavityCycle= cavityString * 3600;
   console.log(cavityCycle)
   // let output = 0;
@@ -22,7 +22,7 @@ document.getElementById("calulator").addEventListener("click", function () {
   const perHourOutput = outputvalue();
   // console.log(perHourOutput);
 
-  const outputString = parseInt(perHourOutput);
+  const outputString = parseFloat(perHourOutput);
   const outputText = document.getElementById("output");
   outputText.innerText = perHourOutput.toFixed(2);
   const outputValue = outputText.innerText;
@@ -58,7 +58,7 @@ const remainTime =  remaingTime();
 // console.log(remainTime)
 
   
-  const remaingstring = parseInt(remainTime );
+  const remaingstring = parseFloat(remainTime );
   // console.log(remaingstring)
 const outputZero =(perHourOutput ? perHourOutput:0)
 
@@ -78,8 +78,9 @@ const remainPreform =remainoutput()
   const product8hourse = document.getElementById("8hoursProduct");
   const producedPreforms = document.getElementById("produce-preforms").value;
   //   total production
-  product8hourse.innerText =parseInt(remainPreform) +
-parseInt(producedPreforms ? producedPreforms : 0);
+  const eightHoursProd =parseFloat(remainPreform) +
+parseFloat(producedPreforms ? producedPreforms : 0);
+product8hourse.innerText =eightHoursProd.toFixed(2)
   const totalProduction = product8hourse.innerText;
   // console.log(totalProduction)
 
@@ -99,7 +100,7 @@ parseInt(producedPreforms ? producedPreforms : 0);
   const perCase = document.getElementById("perCase").value;
 
   const cases = document.getElementById("case");
-  const totalCase = parseInt(totalProduction) / parseInt( perCase ? perCase : 24);
+  const totalCase = parseFloat(totalProduction) / parseFloat( perCase ? perCase : 24);
  console.log(totalCase)
  console.log(totalProduction)
  console.log(( perCase ? perCase : 0))
@@ -119,7 +120,7 @@ console.log(totalCase)
   //   carton
   const carton = document.getElementById("percarton").value;
   const cartons = parseFloat(carton ? carton : 1);
-  const totalCarton = parseFloat(totalProduction) / parseInt(cartons);
+  const totalCarton = parseFloat(totalProduction) / parseFloat(cartons);
   const totalCartons = document.getElementById("Cartons");
   totalCartons.innerText = totalCarton.toFixed(2);
 
@@ -129,7 +130,7 @@ console.log(totalCase)
   const totalCages = document.getElementById("cages");
   const totalCage = cages ? cages : 1;
 
-  totalCages.innerText = (parseInt(totalCarton) / parseInt(totalCage)).toFixed(2);
+  totalCages.innerText = (parseFloat(totalCarton) / parseFloat(totalCage)).toFixed(2);
 });
 
 function refreshPage() {
