@@ -119,7 +119,7 @@ document.getElementById("calulator").addEventListener("click", function () {
   const userWastege = parseFloat(totalWastage ? totalWastage : 0);
   // console.log(userWastege)
 
-  const produceToMaterials = totalProduction * gramToKg;
+  const produceToMaterials = totalProductionInt * gramToKg;
   const materialsString = parseFloat(produceToMaterials);
   console.log(produceToMaterials);
   const TotalMaterial = userWastege + materialsString + underTOMat;
@@ -159,7 +159,7 @@ document.getElementById("calulator").addEventListener("click", function () {
   const avaragecyle= document.getElementById('avarage')
   const avarage = (3600 * cavityString) / runningHourse;
   const avarageAndRunningTime = avarage * parseFloat(runningDvided)
-  avaragecyle.innerText =  avarageAndRunningTime
+  avaragecyle.innerText =  avarageAndRunningTime.toFixed(3)
 
 
 
