@@ -2,7 +2,7 @@ document.getElementById("calulator").addEventListener("click", function () {
   // cyce time
   const cycleTime = document.getElementById("cycle").value;
 
-  const cycleString = parseFloat(cycleTime ? cycleTime : 7);
+  const cycleString = parseFloat(cycleTime ? cycleTime : 0);
 
   // cavity
   const cavity = document.getElementById("cavity").value;
@@ -211,6 +211,8 @@ function refreshPage() {
   for (var i = 0; i < elements.length; i++) {
     elements[i].value = "";
   }
+
+  
 }
 
 function ClearFields() {
