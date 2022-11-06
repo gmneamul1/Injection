@@ -1,4 +1,5 @@
 document.getElementById("calulator").addEventListener("click", function () {
+
   // cyce time
   const cycleTime = document.getElementById("cycle").value;
 
@@ -216,11 +217,26 @@ function ifinit(x) {
   {
     return isinfint.toFixed(2);
   }
+
+
 }
 ifinit()
   totalCages.innerText = (ifinit());
 });
 
+// function refreshPage() {
+//   form.reset();
+
+//   // window.location.reload();5
+// }
+
 function refreshPage() {
-  window.location.reload();
+
+  var elements = [] ;
+  elements = document.getElementsByClassName("MyTestClass");
+
+  for(var i=0; i<elements.length ; i++){
+     elements[i].value = "" ;
+  }
+
 }
