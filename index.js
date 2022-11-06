@@ -1,9 +1,8 @@
 document.getElementById("calulator").addEventListener("click", function () {
-
   // cyce time
   const cycleTime = document.getElementById("cycle").value;
 
-  const cycleString = parseFloat(cycleTime ? cycleTime : 0);
+  const cycleString = parseFloat(cycleTime ? cycleTime : 7);
 
   // cavity
   const cavity = document.getElementById("cavity").value;
@@ -80,32 +79,29 @@ document.getElementById("calulator").addEventListener("click", function () {
     parseFloat(remainPreform) +
     parseFloat(producedPreforms ? producedPreforms : 0);
 
- 
   const totalProduction = product8hourse.innerText;
   // console.log(totalProduction)
-
-  
-
-
 
   //   carton
   const carton = document.getElementById("percarton").value;
   const cartons = parseFloat(carton ? carton : 0);
   // console.log(cartons)
-  const totalCarton = parseFloat(eightHoursProd? eightHoursProd: 0) / parseFloat(cartons? cartons: 1);
-  const totalCartonInt = parseInt(totalCarton )
+  const totalCarton =
+    parseFloat(eightHoursProd ? eightHoursProd : 0) /
+    parseFloat(cartons ? cartons : 1);
+  const totalCartonInt = parseInt(totalCarton);
   const totalCartons = document.getElementById("Cartons");
   totalCartons.innerText = totalCartonInt;
 
-
-// per shift profuction 
-  const totalProduction1 =parseFloat( totalCartonInt? totalCartonInt:0 )*  parseFloat(cartons? cartons: 0); 
-  const totalProductionInt = parseInt(totalProduction1)
-  console.log(totalCarton)
-  console.log(cartons)
-  console.log(totalProduction1)
+  // per shift profuction
+  const totalProduction1 =
+    parseFloat(totalCartonInt ? totalCartonInt : 0) *
+    parseFloat(cartons ? cartons : 0);
+  const totalProductionInt = parseInt(totalProduction1);
+  console.log(totalCarton);
+  console.log(cartons);
+  console.log(totalProduction1);
   product8hourse.innerText = totalProductionInt;
-
 
   // under
   const under = document.getElementById("under-preforms").value;
@@ -136,14 +132,13 @@ document.getElementById("calulator").addEventListener("click", function () {
 
   function wastage(x) {
     if (isNaN(wastageToPercentage)) {
-      return 'Please type input value';
-    }else{
+      return "Please type input value";
+    } else {
       return wastageToPercentage.toFixed(2);
     }
-   
   }
-  
-  wastagePercentage.innerText = (wastage())
+
+  wastagePercentage.innerText = wastage();
   // console.log(wastageToPercentage)
   // console.log(userWastege)
   // running time
@@ -156,24 +151,20 @@ document.getElementById("calulator").addEventListener("click", function () {
   const breakDown = document.getElementById("break");
   const breakFromRuuning = 8 - parseFloat(runningDvided);
   breakDown.innerText = breakFromRuuning.toFixed(3);
-  // avarage cycle time 
-  const avaragecyle= document.getElementById('avarage')
+  // avarage cycle time
+  const avaragecyle = document.getElementById("avarage");
   const avarage = (3600 * cavityString) / runningHourse;
-  const avarageAndRunningTime = avarage * parseFloat(runningDvided)
-  avaragecyle.innerText =  avarageAndRunningTime.toFixed(3)
+  const avarageAndRunningTime = avarage * parseFloat(runningDvided);
+  avaragecyle.innerText = avarageAndRunningTime.toFixed(3);
 
+  // cases
 
-
-
-
-// cases
-
-const perCase = document.getElementById("perCase").value;
+  const perCase = document.getElementById("perCase").value;
 
   const cases = document.getElementById("case");
   const totalCase =
-    parseFloat( totalProduction1) / parseFloat(perCase ? perCase : 24);
-   console.log(totalCase)
+    parseFloat(totalProduction1) / parseFloat(perCase ? perCase : 24);
+  console.log(totalCase);
   //  console.log(totalProduction)
   //  console.log(( perCase ? perCase : 0))
   // // console.log(totalCase)
@@ -184,44 +175,27 @@ const perCase = document.getElementById("perCase").value;
       return totalCase;
     }
   }
-  totalCasena()
+  totalCasena();
   const totalcaseNan = totalCasena();
   // console.log(totalcaseNan)
 
   cases.innerText = totalcaseNan.toFixed(2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   // cages
   const cages = document.getElementById("per-cage").value;
 
   const totalCages = document.getElementById("cages");
   const totalCage = cages ? cages : 0;
-const isinfint =  parseFloat(totalCarton) / parseFloat(totalCage)
-function ifinit(x) {
-  if (!isFinite(isinfint)) {
-    return "Please type Per box Value";
-  } else
-  {
-    return isinfint.toFixed(2);
+  const isinfint = parseFloat(totalCarton) / parseFloat(totalCage);
+  function ifinit(x) {
+    if (!isFinite(isinfint)) {
+      return "Please type Per box Value";
+    } else {
+      return isinfint.toFixed(2);
+    }
   }
-
-
-}
-ifinit()
-  totalCages.innerText = (ifinit());
+  ifinit();
+  totalCages.innerText = ifinit();
 });
 
 // function refreshPage() {
@@ -231,12 +205,16 @@ ifinit()
 // }
 
 function refreshPage() {
-
-  var elements = [] ;
+  var elements = [];
   elements = document.getElementsByClassName("MyTestClass");
 
-  for(var i=0; i<elements.length ; i++){
-     elements[i].value = "" ;
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].value = "";
   }
+}
 
+function ClearFields() {
+  [...document.querySelectorAll(".outputClear")].forEach((div) => {
+    if (div.textContent.trim() >= "0") div.textContent = "00";
+  });
 }

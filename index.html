@@ -8,73 +8,90 @@
     <link rel="stylesheet" href="index.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body id="from" class="text-center xl:w-7/12 lg:w-7/12 items-center margincustom">
-    <h1 class=" animate-bounce text-amber-500 text-xl font-bold preforms">Preforms Calculator</h1>
+  <body
+    id="from"
+    class="text-center xl:w-7/12 lg:w-7/12 items-center margincustom"
+  >
+    <h1 class="animate-bounce text-amber-500 text-xl font-bold preforms">
+      Preforms Calculator
+    </h1>
     <h1 class="font-bold py-1 text-green-600">Details Result</h1>
     <!-- ourly production  -->
     <div class="bg-green-400 rounded w-11/12 m-auto">
       <h1 class="per-shift">Hourly Production</h1>
-      <h4>Output =<span class="text-red-400 text-2xl font-bold" id="output"> 00</span> Pieces</h4>
-      <h4>Material Consumed= <span  class="text-red-400 text-2xl font-bold " id="material-kg"> 00 </span> Kgs</h4>
+      <h4>
+        Output =<span
+          class="text-red-400 text-2xl font-bold outputClear "
+          id="output"
+        >
+          00</span
+        >
+        Pieces
+      </h4>
+      <h4>
+        Material Consumed=
+        <span class="text-red-400 text-2xl font-bold outputClear " id="material-kg">
+          00
+        </span>
+        Kgs
+      </h4>
     </div>
     <!-- total ptoduction  -->
-    <div class="bg-blue-400 rounded text-black font-bold texth4 text-left pl-6 w-11/12 m-auto per-shift">
-      <h1 class="per-shift pl-6 ">Per shift Production</h1>
-      <h4 >
-         Materials Consumed = <span id="total-materials"> 00 </span> Kgs
-      </h4>
-      <h4>Total = <span id="case"> 00 </span> case</h4>
-      <h4>Production = <span id="8hoursProduct"> 00 </span> Pieces</h4>
-      <h4>Total Cartons = <span id="Cartons"> 00 </span></h4>
-      <h4>Wastage percentage = <span id="percentage"> 00 </span></h4>
-      <h4>Total Cages = <span id="cages"> 00 </span></h4>
+    <div
+      class="bg-blue-400 rounded text-black font-bold texth4 text-left pl-6 w-11/12 m-auto per-shift"
+    >
+      <h1 class="per-shift pl-6">Per shift Production</h1>
+      <h4>Materials Consumed = <span id="total-materials" class="outputClear">  00 </span> Kgs</h4>
+      <h4>Total = <span class="outputClear" id="case"> 00 </span> case</h4>
+      <h4>Production = <span class="outputClear" id="8hoursProduct"> 00 </span> Pieces</h4>
+      <h4>Total Cartons = <span class="outputClear" id="Cartons"> 00 </span></h4>
+      <h4>Wastage percentage = <span class="outputClear" id="percentage"> 00 </span></h4>
+      <h4>Total Cages = <span class="outputClear" id="cages"> 00 </span></h4>
       <h4>Running Time = <span id="running"> 00 </span></h4>
-      <h4>Break down = <span id="break"> 00 </span></h4>
-      <h4>Avarage Cycle Time= <span id="avarage"> 00 </span>S</h4>
+      <h4>Break down = <span class="outputClear" id="break"> 00 </span></h4>
+      <h4>Avarage Cycle Time= <span class="outputClear" id="avarage"> 00 </span>S</h4>
     </div>
     <!-- input data  -->
     <h1 class="font-bold py-4 text-red-600 text-xl">Input your Data</h1>
 
-    <div class="bg-gray-800 w-11/12 m-auto rounded-xl pt-4 ">
-          <!-- size  -->
-
+    <div class="bg-gray-800 w-11/12 m-auto rounded-xl pt-4">
+      <!-- size  -->
 
       <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
         <div class="text-end"><h4 class="text-right">Preform Size</h4></div>
         <div class="flex content-center">
-            <div > <input
-                class="bg-white text-xl border-2 border-lime-400   text-black w-24  rounded MyTestClass"
-                id="size"
-                required
-                type="number"
-               
-              /></div>
-            <h4 class=""><span > Grm</span>
-            </h4>
+          <div>
+            <input
+              class="bg-white text-xl border-2 border-lime-400 text-black w-24 rounded MyTestClass"
+              id="size"
+              required
+              type="number"
+            />
+          </div>
+          <h4 class=""><span> Grm</span></h4>
         </div>
       </div>
 
-
-        <!-- cycle time  -->
+      <!-- cycle time  -->
       <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
         <h4 class="flex justify-evenly">Cycle Time</h4>
 
         <h4>
           <input
-            class="bg-white text-xl border-2 border-lime-400   text-black w-24  rounded MyTestClass"
+            class="bg-white text-xl border-2 border-lime-400 text-black w-24 rounded MyTestClass"
             id="cycle"
             type="number"
           />
           Sec
         </h4>
       </div>
-    
+
       <!-- wastage  -->
       <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
-        <h4>Wastage  </h4>
+        <h4>Wastage</h4>
         <h4>
           <input
-            class="bg-white text-xl border-2 border-lime-400  text-black w-24 ml-5 rounded MyTestClass"
+            class="bg-white text-xl border-2 border-lime-400 text-black w-24 ml-5 rounded MyTestClass"
             id="wastage"
             type="number"
           />
@@ -82,12 +99,12 @@
         </h4>
       </div>
 
-       <!-- caviries  -->
+      <!-- caviries  -->
       <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
-        <h4>Cavity  </h4>
+        <h4>Cavity</h4>
         <h4>
           <input
-            class="bg-white text-xl border-2 border-lime-400  text-black w-24 ml-5 rounded MyTestClass"
+            class="bg-white text-xl border-2 border-lime-400 text-black w-24 ml-5 rounded MyTestClass"
             id="cavity"
             type="number"
             placeholder="96"
@@ -101,10 +118,11 @@
 
         <h4 class="mr-3">
           <input
-            class="bg-white text-xl border-2 border-lime-400  text-black w-24  rounded MyTestClass"
+            class="bg-white text-xl border-2 border-lime-400 text-black w-24 rounded MyTestClass"
             id="under-preforms"
             type="number"
-          /> PS
+          />
+          PS
         </h4>
       </div>
       <!-- per case  -->
@@ -112,7 +130,7 @@
         <h4>Per Case</h4>
         <h4>
           <input
-            class="bg-white text-xl border-2 border-lime-400  ml-3 text-black w-24  rounded MyTestClass"
+            class="bg-white text-xl border-2 border-lime-400 ml-3 text-black w-24 rounded MyTestClass"
             id="perCase"
             type="number"
             placeholder="24"
@@ -125,7 +143,7 @@
         <h4>Per Carton</h4>
         <h4>
           <input
-            class="bg-white text-xl border-2 border-lime-400  text-black w-24  rounded MyTestClass"
+            class="bg-white text-xl border-2 border-lime-400 text-black w-24 rounded MyTestClass"
             id="percarton"
             type="number"
             placeholder="00"
@@ -138,10 +156,9 @@
         <h4 class="text-sm">Current prefm</h4>
         <h4 class="mr-6">
           <input
-            class="bg-white text-xl border-2  border-lime-400 fixedt text-black w-24  rounded MyTestClass"
+            class="bg-white text-xl border-2 border-lime-400 fixedt text-black w-24 rounded MyTestClass"
             id="produce-preforms"
             type="number"
-            
           />
           <span class="curent">Ps</span>
         </h4>
@@ -151,17 +168,18 @@
         <h4 class="text-sm">Remaining Time</h4>
         <h4 class="mr-2">
           <input
-            class="bg-white text-xl border-2 border-lime-400  w-24 text-black rounded MyTestClass"
+            class="bg-white text-xl border-2 border-lime-400 w-24 text-black rounded MyTestClass"
             id="remaining-time"
             type="number"
-          /> Min
+          />
+          Min
         </h4>
       </div>
       <div class="flex justify-evenly mx-4 pb-2 text-white font-bold">
         <h4>Per Box</h4>
         <h4>
           <input
-            class="bg-white text-xl border-2 border-lime-400 ml-6 text-black w-24  rounded MyTestClass"
+            class="bg-white text-xl border-2 border-lime-400 ml-6 text-black w-24 rounded MyTestClass"
             id="per-cage"
             type="number"
           />
@@ -170,26 +188,31 @@
       </div>
     </div>
     <br />
-  <div class="flex justify-evenly pb-2">
+    <div class="flex justify-evenly pb-2">
+      <button
+        class="w-2/5 bg-blue-600 rounded hover:bg-sky-700 py-2 text-xl font-bold"
+        type="submit"
+        onClick="refreshPage()"
+      >
+        Clear Input
+      </button>
+     
+
+      <button
+        class="w-2/5 bg-red-600 rounded hover:bg-sky-700 py-2 text-xl font-bold"
+        id="calulator"
+      >
+        Claculate
+      </button> 
+     
+    </div>
     <button
     class="w-2/5 bg-blue-600 rounded  hover:bg-sky-700 py-2 text-xl font-bold"
     type="submit"
-    onClick="refreshPage()"
+    onClick="ClearFields()"
   >
-   Clear
+    Clear Output
   </button>
-
-
-    <button
-    class="w-2/5 bg-red-600 rounded hover:bg-sky-700 py-2 text-xl font-bold"
-    id="calulator"
-  >
-    Claculate
-  </button>
- 
-
- 
-  </div>
 
     <script src="index.js"></script>
   </body>
