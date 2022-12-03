@@ -15,7 +15,7 @@ document.getElementById("calulator").addEventListener("click", function () {
       return 0;
     } else {
       let output = cavityCycle / cycleString;
-      // console.log(output);
+      // console.log(output); ffhhtyh
       return output;
     }
   }
